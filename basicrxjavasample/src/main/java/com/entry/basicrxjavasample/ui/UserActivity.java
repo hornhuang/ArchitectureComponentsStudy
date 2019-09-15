@@ -1,8 +1,10 @@
-package com.entry.basicrxjavasample;
+package com.entry.basicrxjavasample.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.entry.basicrxjavasample.R;
 
 public class UserActivity extends AppCompatActivity {
 
