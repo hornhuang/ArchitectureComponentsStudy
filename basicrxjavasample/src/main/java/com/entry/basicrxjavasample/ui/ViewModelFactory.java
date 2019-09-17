@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.entry.basicrxjavasample.UserDataSource;
+
 /**
  *
  * @ViewModelProvider.Factory: ViewModelProvider 中，用于创建 ViewModel 实例的接口

@@ -56,6 +56,6 @@ public class UserActivity extends AppCompatActivity {
             public void accept(String s) throws Exception {
                 //... s
             }
-        })
+        });
     }
 }
