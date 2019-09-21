@@ -20,8 +20,8 @@ public class User {
      */
     @NonNull
     @PrimaryKey
-    @ColumnInfo(name = "userId")// Room 列注解
-    private String userId;
+    @ColumnInfo(name = "userid")// Room 列注解
+    private String mId;
 
     /**
      * 用户名
@@ -38,17 +38,17 @@ public class User {
      */
     @Ignore
     public User(String mUserName){
-        this.userId    = UUID.randomUUID().toString();
+        this.mId    = UUID.randomUUID().toString();
         this.mUserName = mUserName;
     }
 
     public User(String id, String userName) {
-        this.userId = id;
+        this.mId = id;
         this.mUserName = userName;
     }
 
     public String getId() {
-        return userId;
+        return mId;
     }
 
     public String getUserName() {

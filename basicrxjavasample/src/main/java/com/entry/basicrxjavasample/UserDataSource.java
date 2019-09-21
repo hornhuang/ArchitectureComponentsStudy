@@ -2,6 +2,7 @@ package com.entry.basicrxjavasample;
 
 import com.entry.basicrxjavasample.persistance.User;
 
+import io.reactivex.Completable;
 import io.reactivex.Flowable;
 
 public interface UserDataSource {
@@ -21,7 +22,7 @@ public interface UserDataSource {
      * 但他只能调用 onComplete 和 onError 方法，不能进行 map、flatMap 等操作
      * Completable：https://www.jianshu.com/p/45309538ad94
      */
-    Comparable insertOrUpdateUser(User user);
+    Completable insertOrUpdateUser(User user);
 
 
     /**

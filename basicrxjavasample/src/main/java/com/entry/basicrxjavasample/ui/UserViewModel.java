@@ -5,12 +5,13 @@ import androidx.lifecycle.ViewModel;
 import com.entry.basicrxjavasample.UserDataSource;
 import com.entry.basicrxjavasample.persistance.User;
 
+import io.reactivex.Completable;
 import io.reactivex.Flowable;
 import io.reactivex.functions.Function;
 
 /**
  * UserActivity 的 ViewModel
- * 作用：
+ * 作用：结合 RxJava ，实现对数据库的各类操作
  */
 public class UserViewModel extends ViewModel {
 
@@ -51,7 +52,7 @@ public class UserViewModel extends ViewModel {
      * @param userName
      * @return
      */
-    public Comparable updateUserName(String userName) {
+    public Completable updateUserName(String userName) {
         mUser = mUser == null
                 ? new User(userName)
                 : new User(mUser.getId(), userName);
