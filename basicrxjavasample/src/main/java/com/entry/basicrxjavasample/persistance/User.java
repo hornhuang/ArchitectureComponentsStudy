@@ -33,7 +33,7 @@ public class User {
     /**
      * 构造方法
      * 设置为 @Ignore 将其忽视
-     * 忽视该方法原因未知
+     * 这样以来，这个注解方法就不会被传入 Room 中，做相应处理
      * @param mUserName
      */
     @Ignore
@@ -42,6 +42,14 @@ public class User {
         this.mUserName = mUserName;
     }
 
+    /**
+     * 我们发现与上个方法不同，该方法没有标记 @Ignore 标签
+     *
+     * 所以编译时该方法会被传入 Room 中相应的注解处理器，做相应处理
+     * 这里的处理应该是 add 新数据
+     * @param id
+     * @param userName
+     */
     public User(String id, String userName) {
         this.mId = id;
         this.mUserName = userName;
